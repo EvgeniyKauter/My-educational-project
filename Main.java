@@ -1,17 +1,36 @@
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        Car bmw = new Car();
-        bmw.model = "BMW M5";
-        bmw.year = "2006";
+        float summ;
+        int monthCount;
+        float total = 0;
 
-        Car nissan = new Car();
-        nissan.model = "Nissan Almera";
-        nissan.year = "2010";
+        Scanner scanner = new Scanner(System.in);
 
-        bmw.makeBeBe("BMW M6", "2010");
-        nissan.makeBeBe("Nissan 350Z", "2025");
+        System.out.println("Введите суммы вклада: ");
+        summ = scanner.nextFloat();
+
+        System.out.println("Введите кол-во месяцев: ");
+        monthCount = scanner.nextInt();
+
+        for (int i = 0; i < monthCount; i++) {
+            total += summ * 0.07;
+        }
+        total += summ;
+        System.out.println("Ваш вклад после " + monthCount + " месяцев будет равен " + total);
+
+        total = 0;
+        int monthCountNew = monthCount;
+        while (monthCount > 0) {
+            monthCount--;
+            total += summ * 0.07;
+        }
+        total += summ;
+        System.out.println("Ваш вклад после " + monthCountNew + " месяцев будет равен " + total);
+
+        scanner.close();
     }
 }
 
