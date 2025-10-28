@@ -1,36 +1,20 @@
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
 
-        float summ;
-        int monthCount;
-        float total = 0;
+        String[] array = {"привет", "ПОКА", "гипербола"};
 
-        Scanner scanner = new Scanner(System.in);
+        System.out.println(array[0]);
 
-        System.out.println("Введите суммы вклада: ");
-        summ = scanner.nextFloat();
+        System.out.println(array[1].toLowerCase());
 
-        System.out.println("Введите кол-во месяцев: ");
-        monthCount = scanner.nextInt();
-
-        for (int i = 0; i < monthCount; i++) {
-            total += summ * 0.07;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i].charAt(1) == 'О') {
+                System.out.println(array[i]);
+                System.out.println(array[i].subSequence(0,3) + " " + array[i].subSequence(3, array[i].length()));
+            }
         }
-        total += summ;
-        System.out.println("Ваш вклад после " + monthCount + " месяцев будет равен " + total);
-
-        total = 0;
-        int monthCountNew = monthCount;
-        while (monthCount > 0) {
-            monthCount--;
-            total += summ * 0.07;
-        }
-        total += summ;
-        System.out.println("Ваш вклад после " + monthCountNew + " месяцев будет равен " + total);
-
-        scanner.close();
     }
 }
 
