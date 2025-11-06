@@ -3,18 +3,24 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        String[] array = {"привет", "ПОКА", "гипербола"};
+        Manager petya = new Manager();
+        petya.name = "Петя";
+        petya.salary = 100500.02;
 
-        System.out.println(array[0]);
+        petya.work();
 
-        System.out.println(array[1].toLowerCase());
+        Developer vasya = new Developer();
+        vasya.name = "Вася";
+        vasya.salary = 500100.03;
 
-        for (int i = 0; i < array.length; i++) {
-            if (array[i].charAt(1) == 'О') {
-                System.out.println(array[i]);
-                System.out.println(array[i].subSequence(0,3) + " " + array[i].subSequence(3, array[i].length()));
-            }
-        }
+        vasya.work();
+
+        Circle circle = new Circle();
+        circle.draw();
+
+        Rectangle rectangle = new Rectangle();
+        rectangle.draw();
+
     }
 }
 
