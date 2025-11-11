@@ -3,24 +3,13 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        Manager petya = new Manager();
-        petya.name = "Петя";
-        petya.salary = 100500.02;
+        Guitar guitar = new Guitar();
+        guitar.str = 6;
+        guitar.play(guitar.str);
 
-        petya.work();
-
-        Developer vasya = new Developer();
-        vasya.name = "Вася";
-        vasya.salary = 500100.03;
-
-        vasya.work();
-
-        Circle circle = new Circle();
-        circle.draw();
-
-        Rectangle rectangle = new Rectangle();
-        rectangle.draw();
-
+        Piano piano = new Piano();
+        piano.str = 9;
+        piano.play(piano.str);
     }
 }
 
