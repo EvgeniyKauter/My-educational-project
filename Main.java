@@ -3,13 +3,10 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        Guitar guitar = new Guitar();
-        guitar.str = 6;
-        guitar.play(guitar.str);
+        RandomString randomString = new RandomString();
+        randomString.str = new String[]{"Hello", "world", "!"};
 
-        Piano piano = new Piano();
-        piano.str = 9;
-        piano.play(piano.str);
+        randomString.randomWord();
     }
 }
 
